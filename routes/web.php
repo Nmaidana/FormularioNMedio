@@ -10,10 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
-})->name('inicio');;
+});
+
+Route::get('/inicio', function () {
+    return view('welcome');
+})->name('inicio');
    
 Route::resource('/home', 'HomeController');
 Route::post('/formulario', 'HomeController@store');

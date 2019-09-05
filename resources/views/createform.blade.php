@@ -24,6 +24,12 @@
                               <label for="">Nombre</label>
                               <input type="text" name="nombre" class="form-control" value="{{ isset($nombre)? $nombre :null}}" readonly>
                           </div>
+                         <!-- <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre y Apellido</label>
+                          <input type="text"readonly="readonly" value="{{ $nombre.' '.$apellido }}" name="nombre" class="form-control" id="exampleInputNombre1" placeholder="Mostrar Nombre">
+                          <input type="text" hidden id="custId" name="nombre" value="{{ $nombre }}">
+                          <input type="text" hidden id="custId" name="apellido" value="{{ $apellido }}">
+                          </div>-->
                           <div class="form-group">
                               <label for="">Nacionalidad</label>
                               <input type="text" name="nacionalidad" class="form-control" value="{{isset($nacionalidad)? $nacionalidad :null}}" readonly>
@@ -37,8 +43,21 @@
                                <input type="text"name="vivienda" class="form-control"  placeholder="Ingrese Dirección Actual"value="" required>
                           </div>
                           <div class="form-group">
-                               <label for="">Lugar de Vivienda Deseada</label>
-                               <input type="text"name="lugar_vivienda" class="form-control" placeholder="Ingrese Dirección de Vivienda Deseada"value="" required>
+                            <label>Lugar de Vivienda Deseada</label>
+                            <select class="form-control"name="lugar_vivienda"placeholder="Ingrese Dirección de Vivienda Deseada"value="" required>
+                              <option>Seleccionar Lugar de Vivienda</option>
+                              <option>GRAN COMPLEJO HABITACIONAL </option>
+                              <option>MARIANO ROQUE ALONSO</option>
+                              <option>GRAN COMPLEJO HABITACIONAL VILLA ELISA</option>
+                              <option>GRAN COMPLEJO HABITACIONAL LUQUE</option>
+                              <option>GRAN COMPLEJO HABITACIONAL ARTIGAS</option>
+                              <option>LA FUENTE MARISCAL LOPEZ </option>
+                              <option>GRAN COMPLEJO HABITACIONAL NARANJAL </option>
+                              <option>GRAN COMPLEJO HABITACIONAL LAMBARÉ</option>
+                              <option>GRAN COMPLEJO HABITACIONAL FERNANDO DE LA MORA</option>
+                              <option>GRAN COMPLEJO HABITACIONAL RECOLETA</option>
+                              <option>GRAN COMPLEJO HABITACIONAL PLAZA MAYOR</option>
+                            </select>
                           </div>
                        </div>
                        
@@ -75,7 +94,7 @@
                     </div>
                      <div class="form-group">
                          <label for="">Fecha Nacimiento</label>
-                         <input type="tex" name='fecha_nac'class="form-control" placeholder="Mostrar Fecha Nacimiento"value="{{ isset($fecha_nac)? $fecha_nac :null}}" readonly>
+                         <input type="text" name='fecha_nac'class="form-control" placeholder="Mostrar Fecha Nacimiento"value="{{ isset($fecha_nac)? $fecha_nac :null}}" readonly>
                     </div>
                     
                     <div class="form-group">
@@ -83,17 +102,17 @@
                         <input type="text"name="lugar_trabajo" class="form-control" placeholder="Ingrese Lugar de Trabajo"value="" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Cantidad Aptes</label>
-                        <input type="number"name="napte" class="form-control" placeholder="Agregar N° Aptes"value="" required>
+                        <label for="">Cantidad de Personas Aportantes</label>
+                        <input type="number"name="napte" class="form-control" placeholder="Agregar cantidad de Aportantes"value="" required>
                     </div>
                     <div class="form-group">
-                      <label>Seleccionar Monto a Pagar</label>
+                      <label>Seleccionar Monto que Pueda Pagar en Gs.</label>
                       <select class="form-control"name="monto_apagar"value="" required>
                         <option>Seleccionar Opción de Pago</option>
-                        <option>4289993</option>
-                        <option>3116662</option>
-                        <option>2337496</option>
-                        <option>1466664</option>
+                        <option>4300000</option>
+                        <option>3100000</option>
+                        <option>2300000</option>
+                        <option>1500000</option>
                       </select>
                     </div>
                 </div>
